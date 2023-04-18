@@ -59,6 +59,24 @@ time.sleep(2)
 repeat_program = input("\nDo you want to try again? yes/no: ")
 repeat_program = repeat_program.lower()
     #if yes, repeat the program
+while True:
+    if repeat_program == "yes":
+        time.sleep(1)
+        print("\033[1m" + "\nPlease input the following. \n")
+        time.sleep(1)
+        message = input("Input the message you wanted to be encrypted: ")
+        message = message.upper()
+        time.sleep(1)
+        key = input("\033[1m" + "\nInput the key to produce the ciphertext: ")
+        key = key.upper()
+        ciphertext = encrypt_message(message, key)
+        time.sleep(2)
+        print("\nHere is the encrypted message: \n")
+        time.sleep(3)
+        print(ciphertext.center(100))
+        time.sleep(2)
+        repeat_program = input("\nDo you want to try again? yes/no: ")
+        repeat_program = repeat_program.lower()
     #if no, break
     #else, prompt invalid input then ask user to try again
 #create program ender
