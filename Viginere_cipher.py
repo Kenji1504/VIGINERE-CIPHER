@@ -39,8 +39,13 @@ time.sleep(2)
 print("\033[94m" + "\033[1m" + pyfiglet.figlet_format(TITLE.center(50), font = "contessa"))
 time.sleep(1)
 print("Hello! This program is designed to encrypt the message inputted by the user in accordance with its inputted key.\n")
+time.sleep(1)
 #ask for user's input
-
+message = input("Input the message you wanted to be encrypted: ")
+message = message.upper()
+time.sleep(1)
+key = input("\033[1m" + "\nInput the key to produce the ciphertext: ")
+key = key.upper()
 #call out the function
 #print the ciphertext
 #ask user if they want try again
