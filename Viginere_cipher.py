@@ -23,8 +23,11 @@ def encrypt_message(message, key):
             convert_to_char = NUM_TO_TEXT[convert_to_num]
         #append new characters into ciphertext
             ciphertext += convert_to_char
-    #proceed to the next character of key
-    #in case there are non-alphabet caharacters, append to the ciphertext
+        #proceed to the next character of key
+            index = (index + 1) % len(key)
+        #in case there are non-alphabet caharacters, append to the ciphertext
+        else:
+            ciphertext += characters
 
 #create title design and introduction of the program
 #ask for user's input
