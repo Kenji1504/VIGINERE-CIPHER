@@ -15,12 +15,15 @@ def encrypt_message(message, key):
         #convert each character in the message to numbers from 0-25 according to the dictionary
         if characters.isalpha():
             convert_to_num = TEXT_TO_NUM[characters]
-    #convert each character in the key to numbers from 0-25
+        #convert each character in the key to numbers from 0-25
             key_in_num = TEXT_TO_NUM[key[index]]
-    #add both values, then mod 26
-    #revert the numerical value back into text
-    #append new characters into ciphertext
-    #proceed to the next character
+        #add both values, then mod 26
+            convert_to_num = (convert_to_num + key_in_num) % 26
+        #revert the numerical value back into text
+            convert_to_char = NUM_TO_TEXT[convert_to_num]
+        #append new characters into ciphertext
+            ciphertext += convert_to_char
+    #proceed to the next character of key
     #in case there are non-alphabet caharacters, append to the ciphertext
 
 #create title design and introduction of the program
