@@ -16,6 +16,7 @@ def encrypt_message(message, key):
         if characters.isalpha():
             convert_to_num = TEXT_TO_NUM[characters]
     #convert each character in the key to numbers from 0-25
+            key_in_num = TEXT_TO_NUM[key[index]]
     #add both values, then mod 26
     #revert the numerical value back into text
     #append new characters into ciphertext
