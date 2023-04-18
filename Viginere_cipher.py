@@ -28,6 +28,7 @@ def encrypt_message(message, key):
         #in case there are non-alphabet caharacters, append to the ciphertext
         else:
             ciphertext += characters
+    return ciphertext
 
 #create title design and introduction of the program
 #ask for user's input
@@ -42,3 +43,4 @@ def encrypt_message(message, key):
 message = "LETSGOTOTHESHOW"
 key = "TICKET"
 encryption = encrypt_message(message, key)
+print(encryption)
