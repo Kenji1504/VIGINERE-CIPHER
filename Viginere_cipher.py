@@ -86,3 +86,5 @@ while True:
         repeat_program = input("\nDo you want to try again? yes/no: ")
         repeat_program = repeat_program.lower()
 #create program ender
+time.sleep(2)
+print(("END").center(120, "="))
