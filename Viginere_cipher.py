@@ -78,5 +78,7 @@ while True:
         repeat_program = input("\nDo you want to try again? yes/no: ")
         repeat_program = repeat_program.lower()
     #if no, break
+    elif repeat_program == "no":
+        break
     #else, prompt invalid input then ask user to try again
 #create program ender
