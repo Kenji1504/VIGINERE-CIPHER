@@ -11,7 +11,10 @@ def encrypt_message(message, key):
     ciphertext = ""
     index = 0
     #convert each character in the message and key into their corresponding numerical values
-    #convert each character in the message to numbers from 0-25 according to the dictionary
+    for characters in message:
+        #convert each character in the message to numbers from 0-25 according to the dictionary
+        if characters.isalpha():
+            convert_to_num = TEXT_TO_NUM[characters]
     #convert each character in the key to numbers from 0-25
     #add both values, then mod 26
     #revert the numerical value back into text
@@ -28,6 +31,7 @@ def encrypt_message(message, key):
     #if no, break
     #else, prompt invalid input then ask user to try again
 #create program ender
+
 message = "LETSGOTOTHESHOW"
 key = "TICKET"
 encryption = encrypt_message(message, key)
