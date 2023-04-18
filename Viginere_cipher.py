@@ -47,7 +47,12 @@ time.sleep(1)
 key = input("\033[1m" + "\nInput the key to produce the ciphertext: ")
 key = key.upper()
 #call out the function
+ciphertext = encrypt_message(message, key)
 #print the ciphertext
+time.sleep(2)
+print("\nHere is the encrypted message: \n")
+time.sleep(3)
+print(ciphertext.center(100))
 #ask user if they want try again
     #if yes, repeat the program
     #if no, break
